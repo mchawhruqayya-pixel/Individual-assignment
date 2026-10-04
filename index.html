@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student restaurants</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Student Lunch</span>
+      </div>
+
+      <div class="topbar-controls">
+        <label class="city-select">
+          City
+          <select id="cityFilter"></select>
+        </label>
+
+        <label class="city-select">
+          Restaurant
+          <select id="citySelect"></select>
+        </label>
+      </div>
+    </header>
+    <main class="menu-panel">
+      <div class="menu-header">
+        <div class="menu-heading">
+          <h1 id="restaurantName">Metropolia Karamalmi</h1>
+          <p class="restaurant-address">Karaportti 2, 02610 Espoo</p>
+        </div>
+
+        <div class="menu-header-actions">
+          <div class="view-toggle" role="tablist">
+            <button class="toggle-btn active" id="dayToggleBtn" role="tab">
+              Day
+            </button>
+            <button class="toggle-btn" id="weekToggleBtn" role="tab">
+              Week
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="day-strip" id="dayStrip">
+        <button class="day-tab" data-day="Monday">
+          <span class="day-name">Monday</span><span class="day-date">25.8</span>
+        </button>
+        <button class="day-tab today" data-day="Tuesday">
+          <span class="day-name">Tuesday</span
+          ><span class="day-date">26.8</span>
+        </button>
+        <button class="day-tab" data-day="Wednesday">
+          <span class="day-name">Wednesday</span
+          ><span class="day-date">27.8</span>
+        </button>
+        <button class="day-tab" data-day="Thursday">
+          <span class="day-name">Thursday</span
+          ><span class="day-date">28.8</span>
+        </button>
+        <button class="day-tab" data-day="Friday">
+          <span class="day-name">Friday</span><span class="day-date">29.8</span>
+        </button>
+      </nav>
+      <section class="menu-content">
+        <ul class="dish-list" id="dishList"></ul>
+        <p class="diet-legend">
+          G = gluten-free, L = lactose-free, VL = low-lactose, M = milk-free,
+          Veg = vegetarian, VS = vegan
+        </p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
